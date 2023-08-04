@@ -41,7 +41,7 @@ body{
 .row{
     display: grid;
     gap: 40px;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .inputbox{
@@ -53,9 +53,11 @@ body{
 
 .inputbox label{
     font-size: 20px;
-    margin-top: 0;
-    margin-left: 10px;
+    top: 0;
+    left: 10px;
     position: relative;
+    transition: .5s;
+    cursor: text;
     color:var(--primary-color)
 }
 
@@ -80,15 +82,17 @@ body{
 
 }
 
-.inputbox input:focus +label, .inputbox input:valid{
+.inputbox input:focus + label, .inputbox input:valid + label{
     top: -40px;
     left: 0;
 }
 
 .container button{
+    justify-self: center;
     width: 200px;
     height: 50px;
     border: none;
+    outline: none;
     cursor: pointer;
     background-color: var(--primary-color);
     font-size: 20px;
